@@ -1,0 +1,13 @@
+{
+  "name": "shadow-server",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "shadow-db",
+      "database_id": "<unique-ID-for-your-database>",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
