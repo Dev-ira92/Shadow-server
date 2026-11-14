@@ -1,0 +1,19 @@
+{
+  "name": "shadow-server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "npm run db:migrations:apply && wrangler deploy",
+    "db:migrations:apply": "wrangler d1 migrations apply DB --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^4.15.2"
+  },
+  "cloudflare": {
+    "bindings": {
+      "SERVER_KEY": {
+        "description": "**Server password.** Type a long random password (at least 12 letters and numbers, no spaces, no `|`). You will type the same password in the Shadow app. Do NOT keep the example text. | **رمز سرور.** یک رمز طولانی و تصادفی بنویس (حداقل ۱۲ حرف و عدد، بدون فاصله و بدون `|`). همین رمز را در برنامه‌ی Shadow وارد می‌کنی. متن نمونه را نگه ندار."
+      }
+    }
+  }
+}
